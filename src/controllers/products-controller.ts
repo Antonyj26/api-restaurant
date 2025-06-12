@@ -9,7 +9,7 @@ class ProductController {
       const { name } = request.query;
       const products = await knex<ProductRepository>("products")
         .select()
-        .orderBy("name");
+        .orderBy("id");
 
       return response.json(products);
     } catch (error) {
