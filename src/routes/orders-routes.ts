@@ -5,5 +5,6 @@ const ordersRoutes = Router();
 const ordersController = new OrdersController();
 
 ordersRoutes.post("/", ordersController.create);
+ordersRoutes.get("/table_session/:id", ordersController.index);
 
 export { ordersRoutes };
